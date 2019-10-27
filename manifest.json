@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "CountDown",
+  "version": "1.0",
+  "description": "This extension will navigate to news.google.co.in when google.com is opened",
+  "author": "Sumit",
+  "icons": { "128": "timer.png" },
+  "browser_action": {
+    "default_icon": "timer.png",
+    "default_title": "Countdown"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["main.js"]
+  }
+}
